@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../template-components/template-page/template-page.css">
+    <link rel="stylesheet" href="../template-components/template-header/template-header.css">
+    <link rel="stylesheet" href="../template-components/template-main/template-main.css">
+    <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
+    <link rel="stylesheet" href="../template-components/template-component/template-component.css">
+    <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
+    <link rel="stylesheet" href="../../components/icons/logo.css">
+    <link rel="stylesheet" href="../../components/modal/modal.css">
+    <link rel="stylesheet" href="../../components/button/button.css">
+    <link rel="stylesheet" href="../../components/form-elements/input.css">
+    <link rel="stylesheet" href="../../components/tabs/tabs.css">
+    <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
+</head>
+<body>
+<div class="template-page">
+    <header class="template-header">
+        <div class="container">
+            <a href="../../index.html">
+                <div class="template-header__logo">
+                    <svg class="logo">
+                        <use xlink:href="../../assets/images/icons.svg#logo"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main class="template-main">
+        <div class="container template-main__container">
+            <div class="template-sidebar">
+                <div class="template-sidebar__menu">
+                    <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
+                    <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
+                    <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
+                    <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
+                    <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
+                    <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
+                    <a href="../../index.html" class="template-sidebar__item">Main page</a>
+                </div>
+            </div>
+            <div class="template-component">
+                <div class="template-component__name">Modal</div>
+                <div class="template-component__body">
+                    <button class="button button_primary" id="modal-open">
+                        Open modal
+                    </button>
+                    <div class="modal" id="modal">
+                        <div class="modal__inner">
+                            <div class="modal__close" id="modal-close">
+                                <svg class="modal-icon">
+                                    <use xlink:href="/assets/images/icons.svg#modal-icon"></use>
+                                </svg>
+                            </div>
+                            <div class="modal__title">Basic CSS-only modal</div>
+                            <form class="modal__form">
+                                <div class="text-input">
+                                    <label for="modal-name"
+                                           class="text-input__label">
+                                        Name
+                                    </label>
+                                    <input type="text" id="modal-name"
+                                           class="text-input__field"
+                                           placeholder="John Johnson">
+                                </div>
+                                <div class="text-input">
+                                    <label for="modal-email"
+                                           class="text-input__label text-input__label">
+                                        E-mail
+                                    </label>
+                                    <input type="text" id="modal-email"
+                                           class="text-input__field text-input__field"
+                                           placeholder="email@email.com">
+                                </div>
+                                <button type="submit"
+                                        class="button button_primary">
+                                    Submit
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="template-component__code">
+                    <div class="tabs template-component__tabs">
+                        <input type="radio" name="code"
+                               class="tabs__input tabs__input_html"
+                               id="#html-tab" checked>
+                        <input type="radio" name="code"
+                               class="tabs__input tabs__input_css"
+                               id="#css-tab">
+
+                        <div class="tabs__scroller">
+                            <label class="tabs__label tabs__label_html" for="#html-tab">HTML</label>
+                            <label class="tabs__label tabs__complex tabs__label_css" for="#css-tab">CSS</label>
+                        </div>
+
+                        <div class="separating-line separating-line_template"></div>
+
+                        <div class="template-component__code-block">
+                            <div class="tabs__content tabs__content_html">
+                                <pre>
+                                    <code>
+&lt;div class=&quot;modal&quot; id=&quot;modal&quot;&gt;
+    &lt;div class=&quot;modal__inner&quot;&gt;
+        &lt;div class=&quot;modal__close&quot; id=&quot;modal-close&quot;&gt;
+            &lt;svg class=&quot;modal-icon&quot;&gt;
+                &lt;use xlink:href=&quot;/assets/images/icons.svg#modal-icon&quot;&gt;&lt;/use&gt;
+            &lt;/svg&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;modal__title&quot;&gt;Basic CSS-only modal&lt;/div&gt;
+        &lt;form class=&quot;modal__form&quot;&gt;
+            &lt;div class=&quot;text-input&quot;&gt;
+                &lt;label for=&quot;modal-name&quot;
+                       class=&quot;text-input__label&quot;&gt;
+                    Name
+                &lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;modal-name&quot;
+                       class=&quot;text-input__field&quot;
+                       placeholder=&quot;John Johnson&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;text-input&quot;&gt;
+                &lt;label for=&quot;modal-email&quot;
+                       class=&quot;text-input__label text-input__label&quot;&gt;
+                    E-mail
+                &lt;/label&gt;
+                &lt;input type=&quot;text&quot; id=&quot;modal-email&quot;
+                       class=&quot;text-input__field text-input__field&quot;
+                       placeholder=&quot;email@email.com&quot;&gt;
+            &lt;/div&gt;
+            &lt;button type=&quot;submit&quot;
+                    class=&quot;button button_primary&quot;&gt;
+                Submit
+            &lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="tabs__content tabs__content_css">
+                                <pre>
+                                    <code>
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(196, 196, 196, .5);
+    font-family: Inter, sans-serif;
+}
+.modal__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 428px;
+    width: 100%;
+    height: 350px;
+    padding: 30px 40px;
+    background-color: var(--white);
+    border-radius: 8px;
+}
+.modal__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.modal__title {
+    margin-bottom: 16px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+}
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 30px;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="template-footer">
+        <div class="container">
+            <h2 class="template-footer__text">Reusable component library</h2>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>

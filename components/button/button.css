@@ -1,0 +1,90 @@
+.button {
+    padding: 15px 65px;
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    transition: opacity 200ms ease-in-out, background 200ms ease-in-out, border 200ms ease-in-out;
+}
+.button_primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+.button_primary:hover:enabled {
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.button_secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+.button_secondary:hover:enabled {
+    background-color: var(--dark-purple);
+    cursor: pointer;
+}
+.button_alternate {
+    background-color: var(--white);
+    border: solid 1px var(--grey-3);
+    color: var(--black);
+}
+.button_alternate:hover:enabled {
+    border: solid 1px var(--black);
+    cursor: pointer;
+}
+.button:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+}
+.button_preview {
+    padding: 5px 35px;
+    height: 25px;
+    border-radius: 4px;
+    font-size: 8px;
+}
+.button__all {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+}
+.button__group {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.button__group-name {
+    height: 30px;
+    align-self: flex-start;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+@media screen and (min-width: 576px) {
+    .button__all {
+        justify-content: center;
+        flex-direction: row;
+        column-gap: 20px;
+    }
+    .button__group-name {
+        width: 180px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .button_preview {
+        height: 30px;
+        font-size: 10px;
+    }
+    .button__all {
+        align-items: flex-start;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .button__group {
+        flex-direction: row;
+        column-gap: 20px;
+    }
+
+}
+

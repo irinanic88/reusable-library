@@ -1,0 +1,32 @@
+.template-sidebar {
+    display: none;
+}
+@media screen and (min-width: 992px) {
+    .template-sidebar {
+        display: block;
+        width: 229px;
+    }
+    .template-sidebar__title {
+        font-size: 20px;
+        font-weight: 400;
+        color: black;
+    }
+    .template-sidebar__menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        margin-top: 16px;
+    }
+    .template-sidebar__item {
+        font-family: Inter, sans-serif;
+        font-size: 14px;
+        color: var(--black);
+        text-decoration: none;
+    }
+    .template-sidebar__item:last-child {
+        margin-top: 26px;
+    }
+    .template-sidebar__item:hover {
+        color: var(--orange);
+    }
+}

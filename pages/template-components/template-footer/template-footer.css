@@ -1,0 +1,15 @@
+.template-footer {
+    display: none;
+}
+@media screen and (min-width: 992px) {
+    .template-footer {
+        display: block;
+    }
+    .template-footer__text {
+        margin: 56px 0;
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--grey-3);
+    }
+}

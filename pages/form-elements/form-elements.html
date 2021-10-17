@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../template-components/template-page/template-page.css">
+    <link rel="stylesheet" href="../template-components/template-header/template-header.css">
+    <link rel="stylesheet" href="../template-components/template-main/template-main.css">
+    <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
+    <link rel="stylesheet" href="../template-components/template-component/template-component.css">
+    <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
+    <link rel="stylesheet" href="../../components/icons/logo.css">
+    <link rel="stylesheet" href="../../components/tabs/tabs.css">
+    <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
+    <link rel="stylesheet" href="../../components/form-elements/form-elements.css">
+    <link rel="stylesheet" href="../../components/form-elements/checkbox.css">
+    <link rel="stylesheet" href="../../components/form-elements/radio.css">
+    <link rel="stylesheet" href="../../components/form-elements/toggler.css">
+    <link rel="stylesheet" href="../../components/form-elements/input.css">
+</head>
+<body>
+<div class="template-page">
+    <header class="template-header">
+        <div class="container">
+            <a href="../../index.html">
+                <div class="template-header__logo">
+                    <svg class="logo">
+                        <use xlink:href="../../assets/images/icons.svg#logo"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main class="template-main">
+        <div class="container template-main__container">
+            <div class="template-sidebar">
+                <div class="template-sidebar__menu">
+                    <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
+                    <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
+                    <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
+                    <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
+                    <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
+                    <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
+                    <a href="../../index.html" class="template-sidebar__item">Main page</a>
+                </div>
+            </div>
+            <div class="template-component">
+                <div class="template-component__name">Custom form elements</div>
+                <div class="template-component__body">
+                    <div class="form-elements form-elements_template-page">
+                        <div class="form-elements__group">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input">
+                                <div class="checkbox__state">
+                                    <div class="checkbox__control">
+                                        <svg class="checkbox__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#checkbox-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="checkbox__label">
+                                        Default
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" checked>
+                                <div class="checkbox__state">
+                                    <div class="checkbox__control">
+                                        <svg class="checkbox__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#checkbox-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="checkbox__label">
+                                        Checked
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox__input" disabled>
+                                <div class="checkbox__state">
+                                    <div class="checkbox__control">
+                                        <svg class="checkbox__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#checkbox-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="checkbox__label">
+                                        Disabled
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-elements__group">
+                            <label class="radio">
+                                <input type="radio" name="preview" class="radio__input">
+                                <div class="radio__state">
+                                    <div class="radio__control">
+                                        <svg class="radio__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#radio-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="radio__label">
+                                        Default
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="preview" class="radio__input" checked>
+                                <div class="radio__state">
+                                    <div class="radio__control">
+                                        <svg class="radio__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#radio-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="radio__label">
+                                        Selected
+                                    </div>
+                                </div>
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="preview" class="radio__input" disabled>
+                                <div class="radio__state">
+                                    <div class="radio__control">
+                                        <svg class="radio__icon">
+                                            <use xlink:href="../../assets/images/icons.svg#radio-icon"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="radio__label">
+                                        Disabled
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="form-elements__group">
+                            <label class="toggle">
+                                <input type="checkbox" class="toggle__input">
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__button"></div>
+                                    </div>
+                                    <div class="toggle__label">Default</div>
+                                </div>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" class="toggle__input" checked>
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__button"></div>
+                                    </div>
+                                    <div class="toggle__label">Checked</div>
+                                </div>
+                            </label>
+                            <label class="toggle">
+                                <input type="checkbox" class="toggle__input" disabled>
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__button"></div>
+                                    </div>
+                                    <div class="toggle__label">Disabled</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-elements__group_inputs template-component__form-elements">
+                        <div class="text-input">
+                            <label for="template-normal" class="text-input__label">Normal input</label>
+                            <input id="template-normal" type="text" class="text-input__field"
+                                   placeholder="Hint">
+                            <p class="text-input__message">Some status</p>
+                            <svg class="text-input__success-icon">
+                                <use xlink:href="../../assets/images/icons.svg#check-circle-icon"></use>
+                            </svg>
+                            <svg class="text-input__invalid-icon">
+                                <use xlink:href="../../assets/images/icons.svg#alert-triangle-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="text-input text-input_success">
+                            <label for="template-success" class="text-input__label">Success
+                                input</label>
+                            <input id="template-success" type="text" class="text-input__field"
+                                   placeholder="Hint">
+                            <p class="text-input__message">Some status</p>
+                            <svg class="text-input__success-icon">
+                                <use xlink:href="../../assets/images/icons.svg#check-circle-icon"></use>
+                            </svg>
+                            <svg class="text-input__invalid-icon">
+                                <use xlink:href="../../assets/images/icons.svg#alert-triangle-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="text-input text-input_invalid">
+                            <label for="template-invalid" class="text-input__label">Invalid
+                                input</label>
+                            <input id="template-invalid" type="text" class="text-input__field"
+                                   placeholder="Hint">
+                            <p class="text-input__message">Some status</p>
+                            <svg class="text-input__success-icon">
+                                <use xlink:href="../../assets/images/icons.svg#check-circle-icon"></use>
+                            </svg>
+                            <svg class="text-input__invalid-icon">
+                                <use xlink:href="../../assets/images/icons.svg#alert-triangle-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="text-input">
+                            <label for="template-disabled" class="text-input__label">Disabled
+                                input</label>
+                            <input id="template-disabled" type="text" class="text-input__field"
+                                   placeholder="Hint" disabled>
+                            <p class="text-input__message">Some status</p>
+                            <svg class="text-input__success-icon">
+                                <use xlink:href="../../assets/images/icons.svg#check-circle-icon"></use>
+                            </svg>
+                            <svg class="text-input__invalid-icon">
+                                <use xlink:href="../../assets/images/icons.svg#alert-triangle-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="template-footer">
+        <div class="container">
+            <h2 class="template-footer__text">Reusable component library</h2>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../template-components/template-page/template-page.css">
+    <link rel="stylesheet" href="../template-components/template-header/template-header.css">
+    <link rel="stylesheet" href="../template-components/template-main/template-main.css">
+    <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
+    <link rel="stylesheet" href="../template-components/template-component/template-component.css">
+    <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
+    <link rel="stylesheet" href="../../components/icons/logo.css">
+    <link rel="stylesheet" href="../../components/icons/question-icon.css">
+    <link rel="stylesheet" href="../../components/tabs/tabs.css">
+    <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
+    <link rel="stylesheet" href="../../components/tooltip/tooltip.css">
+</head>
+<body>
+<div class="template-page">
+    <header class="template-header">
+        <div class="container">
+            <a href="../../index.html">
+                <div class="template-header__logo">
+                    <svg class="logo">
+                        <use xlink:href="../../assets/images/icons.svg#logo"></use>
+                    </svg>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main class="template-main">
+        <div class="container template-main__container">
+            <div class="template-sidebar">
+                <div class="template-sidebar__menu">
+                    <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
+                    <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
+                    <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
+                    <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
+                    <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
+                    <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
+                    <a href="../../index.html" class="template-sidebar__item">Main page</a>
+                </div>
+            </div>
+            <div class="template-component">
+                <div class="template-component__name">Tooltip</div>
+                <div class="template-component__body">
+                    <div class="tooltip template-component__tooltip">
+                        <div class="tooltip__trigger">
+                            <svg class="question-icon">
+                                <use xlink:href="/assets/images/icons.svg#question-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="tooltip__text">Helper text</div>
+                    </div>
+                </div>
+                <div class="template-component__code">
+                    <div class="tabs template-component__tabs">
+                        <input type="radio" name="code"
+                               class="tabs__input tabs__input_html"
+                               id="#html-tab" checked>
+                        <input type="radio" name="code"
+                               class="tabs__input tabs__input_css"
+                               id="#css-tab">
+
+                        <div class="tabs__scroller">
+                            <label class="tabs__label tabs__label_html" for="#html-tab">HTML</label>
+                            <label class="tabs__label tabs__complex tabs__label_css" for="#css-tab">CSS</label>
+                        </div>
+
+                        <div class="separating-line separating-line_template"></div>
+
+                        <div class="template-component__code-block">
+                            <div class="tabs__content tabs__content_html">
+                                <pre>
+                                    <code>
+&lt;div class=&quot;tooltip template-component__tooltip&quot;&gt;
+    &lt;div class=&quot;tooltip__trigger&quot;&gt;
+        &lt;svg class=&quot;question-icon&quot;&gt;
+            &lt;use xlink:href=&quot;/assets/images/icons.svg#question-icon&quot;&gt;&lt;/use&gt;
+        &lt;/svg&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tooltip__text&quot;&gt;Helper text&lt;/div&gt;
+&lt;/div&gt;
+                                    </code>
+                                </pre>
+                            </div>
+                            <div class="tabs__content tabs__content_css">
+                                <pre>
+                                    <code>
+.tooltip {
+    display: inline-block;
+    position: relative;
+}
+.tooltip__trigger {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+.tooltip__text {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%, -9px);
+    padding: 13px 21px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: var(--grey-2);
+    white-space: nowrap;
+}
+.tooltip__text:after {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, calc(100% + 16px));
+    content: '';
+    border: 10px solid transparent;
+    border-top: 6px solid var(--blue);
+}
+.tooltip__trigger:hover ~ .tooltip__text {
+    display: block;
+}
+                                    </code>
+                                </pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="template-footer">
+        <div class="container">
+            <h2 class="template-footer__text">Reusable component library</h2>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="./index.js"></script>
+</html>

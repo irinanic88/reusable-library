@@ -1,0 +1,12 @@
+.additional-content {
+    width: 100%;
+    align-self: flex-end;
+}
+.additional-content__name {
+    margin: 32px 0;
+    font-family: Inter, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--grey-3);
+}

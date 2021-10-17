@@ -1,0 +1,79 @@
+.histogram {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 16px 24px 24px;
+    height: 185px;
+    border: solid 1px var(--grey-3);
+    border-radius: 8px;
+    font-family: Inter, sans-serif;
+}
+.histogram__header {
+    display: flex;
+    justify-content: space-between;
+}
+.histogram__title {
+    font-size: 16px;
+    color: var(--black);
+}
+.histogram__number {
+    font-size: 20px;
+    color: var(--black);
+}
+.histogram__full {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--blue);
+}
+.histogram__chart {
+    display: flex;
+    column-gap: 1px;
+    align-items: flex-end;
+    margin-top: 40px;
+    height: 50px;
+}
+.histogram__column {
+    flex: 1 1 9px;
+    background-color: var(--blue);
+}
+.histogram_preview {
+    width: 164px;
+    height: 130px;
+    padding: 15px;
+    border: none;
+    pointer-events: none;
+}
+.histogram__chart_preview {
+    margin-top: 30px;
+}
+.histogram__title_preview {
+    font-size: 12px;
+}
+.histogram__number_preview {
+    font-size: 14px;
+}
+.histogram__full_preview {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+    .histogram_preview {
+        width: 300px;
+        padding: 16px 24px 24px;
+        height: 185px;
+        border: solid 1px var(--grey-3);
+    }
+    .histogram__chart_preview {
+        margin-top: 40px;
+    }
+    .histogram__title_preview {
+        font-size: 16px;
+    }
+    .histogram__number_preview {
+        font-size: 20px;
+    }
+    .histogram__full_preview {
+        font-size: 16px;
+    }
+}
+

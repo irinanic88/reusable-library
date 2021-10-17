@@ -1,0 +1,12 @@
+.template-main__container {
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+@media screen and (min-width: 992px) {
+    .template-main__container {
+        padding: 0 15px;
+        grid-template-columns: auto 1fr;
+        gap: 56px;
+    }
+}

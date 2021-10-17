@@ -1,0 +1,16 @@
+.preview {
+    flex-grow: 1;
+    background-color: var(--grey-0);
+}
+.preview__container {
+    padding: 23px 15px 50px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+@media screen and (min-width: 768px) {
+    .preview__container {
+        gap: 30px;
+    }
+}
