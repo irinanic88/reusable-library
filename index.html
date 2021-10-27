@@ -21,22 +21,99 @@
         <link rel="stylesheet" href="./components/button/button.css">
         <link rel="stylesheet" href="./components/form-elements/checkbox.css">
         <link rel="stylesheet" href="./components/form-elements/radio.css">
+        <link rel="stylesheet" href="./components/form-elements/toggler.css">
         <link rel="stylesheet" href="./components/form-elements/form-elements.css">
         <link rel="stylesheet" href="./components/additional-content/additional-content.css">
         <link rel="stylesheet" href="./components/skeleton/skeleton.css">
         <link rel="stylesheet" href="./components/accordion/accordion.css">
         <link rel="stylesheet" href="./components/icons/accordion-icon.css">
+        <link rel="stylesheet" href="./components/icons/day-icon.css">
+        <link rel="stylesheet" href="./components/icons/night-icon.css">
+        <link rel="stylesheet" href="./components/icons/burger-menu-icon.css">
+        <link rel="stylesheet" href="./components/icons/burger-menu-close-icon.css">
+        <link rel="stylesheet" href="./components/burger-menu/burger-menu.css">
+        <link rel="stylesheet" href="./components/theme-changer/theme-changer.css">
+        <link rel="stylesheet" href="./pages/template-components/template-sidebar/template-sidebar.css">
     </head>
     <body>
         <div class="page">
             <header class="header">
                 <div class="container">
-                    <div class="header__logo">
-                        <svg class="logo">
-                            <use xlink:href="/assets/images/icons.svg#logo"></use>
-                        </svg>
+                    <div class="header__main">
+                        <div class="burger-menu__page">
+                            <button id="burger-menu-open" class="burger-menu__trigger burger-menu__open">
+                                <svg class="burger-menu-icon">
+                                    <use xlink:href="./assets/images/icons.svg#burger-menu-icon"></use>
+                                </svg>
+                            </button>
+                            <div id="burger-menu" class="burger-menu__content">
+                                <div class="burger-menu__header">
+                                    <button id="burger-menu-close" class="burger-menu__trigger burger-menu__close">
+                                        <svg class="burger-menu-close-icon">
+                                            <use xlink:href="../../assets/images/icons.svg#burger-menu-close-icon"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="burger-menu__logo">
+                                        <a href="../../index.html">
+                                            <svg class="template-header__icon logo">
+                                                <use xlink:href="./assets/images/icons.svg#logo"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div
+                                        class="theme-changer theme-changer_mobile burger-menu__theme-changer">
+                                    <label class="toggle theme-changer__toggle">
+                                        <input data-id="theme-changer" type="checkbox"
+                                               class="toggle__input theme-changer__input">
+                                        <div class="theme-changer__mode theme-changer__light">Light mode</div>
+                                        <div class="theme-changer__mode theme-changer__dark">Dark mode</div>
+                                        <div class="toggle__state">
+                                            <div class="toggle__control">
+                                                <div class="toggle__button"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="burger-menu__list">
+                                    <h3 class="template-sidebar__title">All Components</h3>
+                                    <div class="template-sidebar__menu template-sidebar__menu_burger">
+                                        <a href="./pages/modal/modal.html" class="template-sidebar__item .template-sidebar__item_burger">Modal</a>
+                                        <a href="./pages/tooltip/tooltip.html" class="template-sidebar__item .template-sidebar__item_burger">Tooltip</a>
+                                        <a href="./pages/avatar/avatar.html" class="template-sidebar__item .template-sidebar__item_burger">Avatar</a>
+                                        <a href="./pages/calendar/calendar.html" class="template-sidebar__item .template-sidebar__item_burger">Calendar</a>
+                                        <a href="./pages/histogram/histogram.html" class="template-sidebar__item .template-sidebar__item_burger">Histogram</a>
+                                        <a href="./pages/form-elements/form-elements.html" class="template-sidebar__item .template-sidebar__item_burger">Custom form elements</a>
+                                        <a href="./pages/../index.html" class="template-sidebar__item .template-sidebar__item_burger">Main page</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__logo">
+                            <svg class="template-header__icon logo">
+                                <use xlink:href="./assets/images/icons.svg#logo"></use>
+                            </svg>
+                        </div>
+                        <div class="theme-changer">
+                            <label class="toggle">
+                                <input data-id="theme-changer" type="checkbox"
+                                       class="toggle__input">
+                                <svg class="theme-changer__day day-icon">
+                                    <use xlink:href="../../assets/images/icons.svg#day-icon"></use>
+                                </svg>
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__button"></div>
+                                    </div>
+                                </div>
+                                <svg class="theme-changer__night night-icon">
+                                    <use xlink:href="../../assets/images/icons.svg#night-icon"></use>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
-                    <h1 class="header__title">Reusable component library</h1>           
+                    <h1 class="header__title">Reusable component library</h1>
                 </div>
             </header>
             <main class="tabs">
@@ -739,5 +816,7 @@
                 </div>
             </footer>
         </div>
+    <script src="./scripts/theme-changer.js"></script>
+    <script src="./scripts/burger-menu.js"></script>
     </body>
 </html>

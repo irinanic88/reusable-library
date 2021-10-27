@@ -1,3 +1,8 @@
+.template-main {
+    padding-bottom: 32px;
+    background-color: var(--background-template);
+    transition: background-color 200ms;
+}
 .template-main__container {
     padding: 0;
     display: grid;

@@ -1,106 +1,183 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../template-components/template-page/template-page.css">
-    <link rel="stylesheet" href="../template-components/template-header/template-header.css">
-    <link rel="stylesheet" href="../template-components/template-main/template-main.css">
-    <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
-    <link rel="stylesheet" href="../template-components/template-component/template-component.css">
-    <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
-    <link rel="stylesheet" href="../../components/icons/logo.css">
-    <link rel="stylesheet" href="../../components/tabs/tabs.css">
-    <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
-    <link rel="stylesheet" href="../../components/avatar/avatar.css">
-</head>
-<body>
-<div class="template-page">
-    <header class="template-header">
-        <div class="container">
-            <a href="../../index.html">
-                <div class="template-header__logo">
-                    <svg class="logo">
-                        <use xlink:href="../../assets/images/icons.svg#logo"></use>
-                    </svg>
-                </div>
-            </a>
-        </div>
-    </header>
-    <main class="template-main">
-        <div class="container template-main__container">
-            <div class="template-sidebar">
-                <div class="template-sidebar__menu">
-                    <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
-                    <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
-                    <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
-                    <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
-                    <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
-                    <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
-                    <a href="../../index.html" class="template-sidebar__item">Main page</a>
-                </div>
-            </div>
-            <div class="template-component">
-                <div class="template-component__name">Avatar</div>
-                <div class="template-component__body">
-                    <div class="avatar">
-                        <img class="avatar__image" src="../../assets/images/avatar-200.jpg" alt="avatar-picture">
-                    </div>
-                </div>
-                <div class="template-component__code">
-                    <div class="tabs template-component__tabs">
-                        <input type="radio" name="code"
-                               class="tabs__input tabs__input_html"
-                               id="#html-tab" checked>
-                        <input type="radio" name="code"
-                               class="tabs__input tabs__input_css"
-                               id="#css-tab">
-
-                        <div class="tabs__scroller">
-                            <label class="tabs__label tabs__label_html" for="#html-tab">HTML</label>
-                            <label class="tabs__label tabs__complex tabs__label_css" for="#css-tab">CSS</label>
-                        </div>
-
-                        <div class="separating-line separating-line_template"></div>
-
-                        <div class="template-component__code-block">
-                            <div class="tabs__content tabs__content_html">
-                                <pre>
-                                    <code>
-&lt;div class=&quot;avatar&quot;&gt;
-    &lt;img class=&quot;avatar__image&quot; src=&quot;../../assets/images/avatar-200.jpg&quot; alt=&quot;avatar-picture&quot;&gt;
-&lt;/div&gt;
-                                    </code>
-                                </pre>
-                            </div>
-                            <div class="tabs__content tabs__content_css">
-                                <pre>
-                                    <code>
-.avatar {
-    width: 116px;
-    height: 116px;
-}
-.avatar__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-                                    </code>
-                                </pre>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../assets/css/main.css">
+        <link rel="stylesheet" href="../template-components/template-page/template-page.css">
+        <link rel="stylesheet" href="../template-components/template-header/template-header.css">
+        <link rel="stylesheet" href="../template-components/template-main/template-main.css">
+        <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
+        <link rel="stylesheet" href="../template-components/template-component/template-component.css">
+        <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
+        <link rel="stylesheet" href="../../components/icons/logo.css">
+        <link rel="stylesheet" href="../../components/tabs/tabs.css">
+        <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
+        <link rel="stylesheet" href="../../components/avatar/avatar.css">
+        <link rel="stylesheet" href="../../components/form-elements/toggler.css">
+        <link rel="stylesheet" href="../../components/icons/day-icon.css">
+        <link rel="stylesheet" href="../../components/icons/night-icon.css">
+        <link rel="stylesheet" href="../../components/icons/burger-menu-icon.css">
+        <link rel="stylesheet" href="../../components/icons/burger-menu-close-icon.css">
+        <link rel="stylesheet" href="../../components/burger-menu/burger-menu.css">
+        <link rel="stylesheet" href="../../components/theme-changer/theme-changer.css">
+    </head>
+    <body>
+        <div class="template-page">
+            <header class="template-header">
+                <div class="container">
+                    <div class="template-header__main">
+                        <div class="burger-menu__page">
+                            <button id="burger-menu-open" class="burger-menu__trigger burger-menu__open">
+                                <svg class="burger-menu-icon">
+                                    <use xlink:href="../../assets/images/icons.svg#burger-menu-icon"></use>
+                                </svg>
+                            </button>
+                            <div id="burger-menu" class="burger-menu__content">
+                                <div class="burger-menu__header">
+                                    <button id="burger-menu-close" class="burger-menu__trigger burger-menu__close">
+                                        <svg class="burger-menu-close-icon">
+                                            <use xlink:href="../../assets/images/icons.svg#burger-menu-close-icon"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="burger-menu__logo">
+                                        <a href="../../index.html">
+                                            <svg class="template-header__icon logo">
+                                                <use xlink:href="../../assets/images/icons.svg#logo"></use>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="theme-changer theme-changer_mobile burger-menu__theme-changer">
+                                    <label class="toggle theme-changer__toggle">
+                                        <input data-id="theme-changer" type="checkbox"
+                                               class="toggle__input theme-changer__input">
+                                        <div class="theme-changer__mode theme-changer__light">Light mode</div>
+                                        <div class="theme-changer__mode theme-changer__dark">Dark mode</div>
+                                        <div class="toggle__state">
+                                            <div class="toggle__control">
+                                                <div class="toggle__button"></div>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="burger-menu__list">
+                                    <h3 class="template-sidebar__title">All Components</h3>
+                                    <div class="template-sidebar__menu template-sidebar__menu_burger">
+                                        <a href="../modal/modal.html" class="template-sidebar__item .template-sidebar__item_burger">Modal</a>
+                                        <a href="../tooltip/tooltip.html" class="template-sidebar__item .template-sidebar__item_burger">Tooltip</a>
+                                        <a href="../avatar/avatar.html" class="template-sidebar__item .template-sidebar__item_burger">Avatar</a>
+                                        <a href="../calendar/calendar.html" class="template-sidebar__item .template-sidebar__item_burger">Calendar</a>
+                                        <a href="../histogram/histogram.html" class="template-sidebar__item .template-sidebar__item_burger">Histogram</a>
+                                        <a href="../form-elements/form-elements.html" class="template-sidebar__item .template-sidebar__item_burger">Custom form elements</a>
+                                        <a href="../../index.html" class="template-sidebar__item .template-sidebar__item_burger">Main page</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="template-header__logo">
+                            <a href="../../index.html">
+                                <svg class="template-header__icon logo">
+                                    <use xlink:href="../../assets/images/icons.svg#logo"></use>
+                                </svg>
+                            </a>
+                        </div>
+
+                        <div class="theme-changer">
+                            <label class="toggle">
+                                <input data-id="theme-changer" type="checkbox"
+                                       class="toggle__input">
+                                <svg class="theme-changer__day day-icon">
+                                    <use xlink:href="../../assets/images/icons.svg#day-icon"></use>
+                                </svg>
+                                <div class="toggle__state">
+                                    <div class="toggle__control">
+                                        <div class="toggle__button"></div>
+                                    </div>
+                                </div>
+                                <svg class="theme-changer__night night-icon">
+                                    <use xlink:href="../../assets/images/icons.svg#night-icon"></use>
+                                </svg>
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </header>
+            <main class="template-main">
+                <div class="container template-main__container">
+                    <div class="template-sidebar">
+                        <div class="template-sidebar__menu">
+                            <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
+                            <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
+                            <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
+                            <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
+                            <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
+                            <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
+                            <a href="../../index.html" class="template-sidebar__item">Main page</a>
+                        </div>
+                    </div>
+                    <div class="template-component">
+                        <div class="template-component__name">Avatar</div>
+                        <div class="template-component__body">
+                            <div class="avatar">
+                                <img class="avatar__image" src="../../assets/images/avatar-200.jpg" alt="avatar-picture">
+                            </div>
+                        </div>
+                        <div class="template-component__code">
+                            <div class="tabs template-component__tabs">
+                                <input type="radio" name="code"
+                                       class="tabs__input tabs__input_html"
+                                       id="#html-tab" checked>
+                                <input type="radio" name="code"
+                                       class="tabs__input tabs__input_css"
+                                       id="#css-tab">
+
+                                <div class="tabs__scroller">
+                                    <label class="tabs__label tabs__label_html" for="#html-tab">HTML</label>
+                                    <label class="tabs__label tabs__complex tabs__label_css" for="#css-tab">CSS</label>
+                                </div>
+
+                                <div class="separating-line separating-line_template"></div>
+
+                                <div class="template-component__code-block">
+                                    <div class="tabs__content tabs__content_html">
+                                        <pre>
+                                            <code>
+        &lt;div class=&quot;avatar&quot;&gt;
+            &lt;img class=&quot;avatar__image&quot; src=&quot;../../assets/images/avatar-200.jpg&quot; alt=&quot;avatar-picture&quot;&gt;
+        &lt;/div&gt;
+                                            </code>
+                                        </pre>
+                                    </div>
+                                    <div class="tabs__content tabs__content_css">
+                                        <pre>
+                                            <code>
+        .avatar {
+            width: 116px;
+            height: 116px;
+        }
+        .avatar__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+                                            </code>
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="template-footer">
+                <div class="container">
+                    <h2 class="template-footer__text">Reusable component library</h2>
+                </div>
+            </footer>
         </div>
-    </main>
-    <footer class="template-footer">
-        <div class="container">
-            <h2 class="template-footer__text">Reusable component library</h2>
-        </div>
-    </footer>
-</div>
-</body>
-<script src="./index.js"></script>
+        <script src="../../scripts/theme-changer.js"></script>
+        <script src="../../scripts/burger-menu.js"></script>
+    </body>
 </html>

@@ -5,12 +5,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--white);
+    background-color: var(--background);
 }
 .template-component__name {
     margin-bottom: 20px;
     font-family: Inter, sans-serif;
     font-size: 20px;
+    color: var(--font-1);
 }
 .template-component__tabs {
     margin-top: 25px;
@@ -27,6 +28,11 @@
 }
 .template-component__histogram {
     width: 300px;
+}
+.template-component__code {
+    max-width: 100%;
+    overflow-x: auto;
+    color: var(--font-1);
 }
 
 @media screen and (min-width: 992px) {

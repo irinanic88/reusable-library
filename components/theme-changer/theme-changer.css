@@ -1,0 +1,42 @@
+.theme-changer {
+    display: none;
+}
+.theme-changer_mobile {
+    display: block;
+}
+.theme-changer__day {
+    margin-right: 15px;
+    color: var(--font-3);
+    transition: color 1000ms;
+}
+.theme-changer__night {
+    margin-left: 15px;
+    color: var(--font-3);
+    transition: color 1000ms;
+}
+.theme-changer__toggle {
+    display: flex;
+    justify-content: space-between;
+}
+.theme-changer__mode {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    color: var(--font-2);
+}
+.theme-changer__light {
+    display: none;
+}
+.theme-changer__dark {
+    display: block;
+}
+.theme-changer__input:checked ~ .theme-changer__light {
+    display: block;
+}
+.theme-changer__input:checked ~ .theme-changer__dark {
+    display: none;
+}
+@media screen and (min-width: 992px) {
+    .theme-changer {
+        display: block;
+    }
+}

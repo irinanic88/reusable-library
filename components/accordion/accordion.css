@@ -1,10 +1,17 @@
 .accordion{
+    height: 72px;
     position: relative;
     box-sizing: border-box;
     padding: 24px 32px;
     max-width: 730px;
-    border: solid 1px var(--grey-3);
+    background-color: var(--background);
+    border: solid 1px var(--font-3);
     border-radius: 8px;
+    transition: height 100ms ease-in-out;
+}
+.accordion[open] {
+    height: 200px;
+
 }
 .accordion[open] .accordion__trigger {
     transform: rotate(180deg);
@@ -22,14 +29,14 @@
     font-size: 16px;
     font-weight: 400;
     text-transform: capitalize;
-    color: var(--black);
+    color: var(--font-1);
 }
 .accordion__title::marker {
     display: none;
 }
 .accordion__body {
     padding-top: 16px;
-    color: var(--grey-4);
+    color: var(--font-2);
 }
 .accordion__group {
     display: flex;

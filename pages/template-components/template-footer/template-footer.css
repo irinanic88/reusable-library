@@ -1,5 +1,7 @@
 .template-footer {
     display: none;
+    background-color: var(--background-template);
+    transition: background-color 200ms;
 }
 @media screen and (min-width: 992px) {
     .template-footer {
@@ -10,6 +12,6 @@
         text-align: center;
         font-size: 12px;
         font-weight: 500;
-        color: var(--grey-3);
+        color: var(--font-3);
     }
 }

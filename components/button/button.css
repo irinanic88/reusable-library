@@ -10,27 +10,27 @@
 }
 .button_primary {
     background-color: var(--primary);
-    color: var(--white);
+    color: var(--background);
 }
 .button_primary:hover:enabled {
-    background-color: var(--dark-blue);
+    background-color: var(--primary-hover);
     cursor: pointer;
 }
 .button_secondary {
     background-color: var(--secondary);
-    color: var(--white);
+    color: var(--background);
 }
 .button_secondary:hover:enabled {
-    background-color: var(--dark-purple);
+    background-color: var(--secondary-hover);
     cursor: pointer;
 }
 .button_alternate {
-    background-color: var(--white);
-    border: solid 1px var(--grey-3);
-    color: var(--black);
+    background-color: var(--background);
+    border: solid 1px var(--font-3);
+    color: var(--font-1);
 }
 .button_alternate:hover:enabled {
-    border: solid 1px var(--black);
+    border: solid 1px var(--font-1);
     cursor: pointer;
 }
 .button:disabled {
@@ -60,6 +60,10 @@
     text-align: center;
     font-size: 16px;
     font-weight: 500;
+}
+.button:active {
+    transform: translateY(1px);
+    transition: transform 200ms linear;
 }
 @media screen and (min-width: 576px) {
     .button__all {

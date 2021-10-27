@@ -15,33 +15,33 @@
     font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: var(--grey-3);
+    color: var(--font-3);
     border-bottom: 5px solid transparent;
     cursor: pointer;
 }
 .tabs__input_all:checked ~ .tabs__scroller .tabs__label_all {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__input_component:checked ~ .tabs__scroller .tabs__label_component {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__input_element:checked ~ .tabs__scroller .tabs__label_element {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__input_template:checked ~ .tabs__scroller .tabs__label_template {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__input_html:checked ~ .tabs__scroller .tabs__label_html {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__input_css:checked ~ .tabs__scroller .tabs__label_css {
-    color: var(--black);
-    border-bottom-color: var(--black);
+    color: var(--font-1);
+    border-bottom-color: var(--font-1);
 }
 .tabs__content {
     display: none;
