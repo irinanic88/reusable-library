@@ -50,10 +50,10 @@
 }
 @keyframes move-background {
     0% {
-        background-position: -100%;
-    }
-    0% {
         background-position: 100%;
+    }
+    100% {
+        background-position: -100%;
     }
 }
 @media screen and (min-width: 768px) {
