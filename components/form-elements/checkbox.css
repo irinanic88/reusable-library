@@ -60,11 +60,11 @@
     animation-iteration-count: 1;
 }
 .checkbox__label_preview {
-    margin-left: 4px;
-    font-size: 12px;
+    display: none;
 }
 @media screen and (min-width: 768px) {
     .checkbox__label_preview {
+        display: block;
         margin-left: 12px;
         font-size: 16px;
     }

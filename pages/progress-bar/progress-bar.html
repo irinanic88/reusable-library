@@ -3,16 +3,16 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../assets/css/main.css">
-        <link rel="stylesheet" href="../template-components/template-page/template-page.css">
-        <link rel="stylesheet" href="../template-components/template-header/template-header.css">
-        <link rel="stylesheet" href="../template-components/template-main/template-main.css">
-        <link rel="stylesheet" href="../template-components/template-sidebar/template-sidebar.css">
-        <link rel="stylesheet" href="../template-components/template-component/template-component.css">
-        <link rel="stylesheet" href="../template-components/template-footer/template-footer.css">
+        <link rel="stylesheet" href="../../template-components/template-page/template-page.css">
+        <link rel="stylesheet" href="../../template-components/template-header/template-header.css">
+        <link rel="stylesheet" href="../../template-components/template-main/template-main.css">
+        <link rel="stylesheet" href="../../template-components/template-sidebar/template-sidebar.css">
+        <link rel="stylesheet" href="../../template-components/template-component/template-component.css">
+        <link rel="stylesheet" href="../../template-components/template-footer/template-footer.css">
         <link rel="stylesheet" href="../../components/icons/logo.css">
         <link rel="stylesheet" href="../../components/tabs/tabs.css">
         <link rel="stylesheet" href="../../components/separating-line/separating-line.css">
-        <link rel="stylesheet" href="../../components/avatar/avatar.css">
+        <link rel="stylesheet" href="../../components/progress-bar/progress-bar.css">
         <link rel="stylesheet" href="../../components/form-elements/toggler.css">
         <link rel="stylesheet" href="../../components/icons/day-icon.css">
         <link rel="stylesheet" href="../../components/icons/night-icon.css">
@@ -65,7 +65,8 @@
                                     <div class="template-sidebar__menu template-sidebar__menu_burger">
                                         <a href="../modal/modal.html" class="template-sidebar__item .template-sidebar__item_burger">Modal</a>
                                         <a href="../tooltip/tooltip.html" class="template-sidebar__item .template-sidebar__item_burger">Tooltip</a>
-                                        <a href="../avatar/avatar.html" class="template-sidebar__item .template-sidebar__item_burger">Avatar</a>
+                                        <a href="../progress-bar/progress-bar.html"
+                                           class="template-sidebar__item .template-sidebar__item_burger">Progress bar</a>
                                         <a href="../calendar/calendar.html" class="template-sidebar__item .template-sidebar__item_burger">Calendar</a>
                                         <a href="../histogram/histogram.html" class="template-sidebar__item .template-sidebar__item_burger">Histogram</a>
                                         <a href="../form-elements/form-elements.html" class="template-sidebar__item .template-sidebar__item_burger">Custom form elements</a>
@@ -109,7 +110,7 @@
                         <div class="template-sidebar__menu">
                             <a href="../modal/modal.html" class="template-sidebar__item">Modal</a>
                             <a href="../tooltip/tooltip.html" class="template-sidebar__item">Tooltip</a>
-                            <a href="../avatar/avatar.html" class="template-sidebar__item">Avatar</a>
+                            <a href="../progress-bar/progress-bar.html" class="template-sidebar__item">Progress bar</a>
                             <a href="../calendar/calendar.html" class="template-sidebar__item">Calendar</a>
                             <a href="../histogram/histogram.html" class="template-sidebar__item">Histogram</a>
                             <a href="../form-elements/form-elements.html" class="template-sidebar__item">Custom form elements</a>
@@ -117,12 +118,13 @@
                         </div>
                     </div>
                     <div class="template-component">
-                        <div class="template-component__name">Avatar</div>
+                        <div class="template-component__name">Progress bar</div>
                         <div class="template-component__body">
-                            <div class="avatar">
-                                <img class="avatar__image" src="../../assets/images/avatar-200.jpg" alt="avatar-picture">
+                            <div class="progress-bar">
+                                <div class="value-container"></div>
                             </div>
                         </div>
+
                         <div class="template-component__code">
                             <div class="tabs template-component__tabs">
                                 <input type="radio" name="code"
@@ -143,8 +145,8 @@
                                     <div class="tabs__content tabs__content_html">
                                         <pre>
                                             <code>
-        &lt;div class=&quot;avatar&quot;&gt;
-            &lt;img class=&quot;avatar__image&quot; src=&quot;../../assets/images/avatar-200.jpg&quot; alt=&quot;avatar-picture&quot;&gt;
+        &lt;div class=&quot;progress-bar&quot;&gt;
+            &lt;div class=&quot;value-container&quot;&gt;&lt;/div&gt;
         &lt;/div&gt;
                                             </code>
                                         </pre>
@@ -152,15 +154,44 @@
                                     <div class="tabs__content tabs__content_css">
                                         <pre>
                                             <code>
-        .avatar {
-            width: 116px;
-            height: 116px;
-        }
-        .avatar__image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .progress-bar {
+            position: relative;
+            height: 160px;
+            width: 160px;
             border-radius: 50%;
+            background-color: var(--font-4);
+            display: grid;
+            place-items: center;
+        }
+
+        .progress-bar:before {
+            content: '';
+            position: absolute;
+            height: 85%;
+            width: 85%;
+            border-radius: 50%;
+            background-color: var(--background);
+        }
+
+        .progress-bar_preview {
+            pointer-events: none;
+            height: 116px;
+            width: 116px;
+        }
+
+        .value-container {
+            position: relative;
+            font-family: 'Inter', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--font-1);
+        }
+
+        @media screen and (min-width: 768px) {
+            .progress-bar_preview {
+                width: 160px;
+                height: 160px;
+            }
         }
                                             </code>
                                         </pre>
@@ -179,5 +210,6 @@
         </div>
         <script src="../../scripts/theme-changer.js"></script>
         <script src="../../scripts/burger-menu.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
     </body>
 </html>

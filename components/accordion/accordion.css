@@ -10,7 +10,7 @@
     transition: height 100ms ease-in-out;
 }
 .accordion[open] {
-    height: 200px;
+    height: auto;
 
 }
 .accordion[open] .accordion__trigger {
