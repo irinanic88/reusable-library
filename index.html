@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="./components/tabs/tabs.css">
         <link rel="stylesheet" href="./components/separating-line/separating-line.css">
         <link rel="stylesheet" href="./components/calendar/calendar.css">
-        <link rel="stylesheet" href="./components/avatar/avatar.css">
+        <link rel="stylesheet" href="./components/progress-bar/progress-bar.css">
         <link rel="stylesheet" href="./components/tooltip/tooltip.css">
         <link rel="stylesheet" href="./components/icons/question-icon.css">
         <link rel="stylesheet" href="./components/modal/modal.css">
@@ -33,7 +33,7 @@
         <link rel="stylesheet" href="./components/icons/burger-menu-close-icon.css">
         <link rel="stylesheet" href="./components/burger-menu/burger-menu.css">
         <link rel="stylesheet" href="./components/theme-changer/theme-changer.css">
-        <link rel="stylesheet" href="./pages/template-components/template-sidebar/template-sidebar.css">
+        <link rel="stylesheet" href="template-components/template-sidebar/template-sidebar.css">
     </head>
     <body>
         <div class="page">
@@ -80,7 +80,8 @@
                                     <div class="template-sidebar__menu template-sidebar__menu_burger">
                                         <a href="./pages/modal/modal.html" class="template-sidebar__item .template-sidebar__item_burger">Modal</a>
                                         <a href="./pages/tooltip/tooltip.html" class="template-sidebar__item .template-sidebar__item_burger">Tooltip</a>
-                                        <a href="./pages/avatar/avatar.html" class="template-sidebar__item .template-sidebar__item_burger">Avatar</a>
+                                        <a href="./pages/progress-bar/progress-bar.html"
+                                           class="template-sidebar__item .template-sidebar__item_burger">Progress bar</a>
                                         <a href="./pages/calendar/calendar.html" class="template-sidebar__item .template-sidebar__item_burger">Calendar</a>
                                         <a href="./pages/histogram/histogram.html" class="template-sidebar__item .template-sidebar__item_burger">Histogram</a>
                                         <a href="./pages/form-elements/form-elements.html" class="template-sidebar__item .template-sidebar__item_burger">Custom form elements</a>
@@ -260,16 +261,15 @@
                                     <div class="card__type">Element</div>
                                 </div>
                             </a>
-                            <a href="pages/avatar/avatar.html" class="card card__preview">
+                            <a href="pages/progress-bar/progress-bar.html" class="card card__preview">
                                 <div class="card__body">
-                                    <div class="avatar avatar_preview">
-                                        <img class="avatar__image" src="./assets/images/avatar-200.jpg"
-                                             alt="avatar-picture">
+                                    <div class="progress-bar progress-bar_preview">
+                                        <div class="value-container"></div>
                                     </div>
                                 </div>
                                 <div class="separating-line"></div>
                                 <div class="card__name">
-                                    <div class="card__title">Avatar</div>
+                                    <div class="card__title">Progress bar</div>
                                     <div class="card__type">Template</div>
                                 </div>
                             </a>
@@ -756,16 +756,15 @@
                                     <div class="card__type">Template</div>
                                 </div>
                             </a>
-                            <a href="pages/avatar/avatar.html" class="card card__preview">
+                            <a href="pages/progress-bar/progress-bar.html" class="card card__preview">
                                 <div class="card__body">
-                                    <div class="avatar avatar_preview">
-                                        <img class="avatar__image" src="./assets/images/avatar-200.jpg"
-                                             alt="avatar-picture">
+                                    <div class="progress-bar progress-bar_preview">
+                                        <div class="value-container"></div>
                                     </div>
                                 </div>
                                 <div class="separating-line"></div>
                                 <div class="card__name">
-                                    <div class="card__title">Avatar</div>
+                                    <div class="card__title">Progress bar</div>
                                     <div class="card__type">Template</div>
                                 </div>
                             </a>
@@ -818,5 +817,6 @@
         </div>
     <script src="./scripts/theme-changer.js"></script>
     <script src="./scripts/burger-menu.js"></script>
+    <script src="./scripts/progress-bar.js"></script>
     </body>
 </html>

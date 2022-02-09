@@ -1,0 +1,39 @@
+.progress-bar {
+    position: relative;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    background-color: var(--font-4);
+    display: grid;
+    place-items: center;
+}
+
+.progress-bar:before {
+    content: '';
+    position: absolute;
+    height: 85%;
+    width: 85%;
+    border-radius: 50%;
+    background-color: var(--background);
+}
+
+.progress-bar_preview {
+    pointer-events: none;
+    height: 116px;
+    width: 116px;
+}
+
+.value-container {
+    position: relative;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--font-1);
+}
+
+@media screen and (min-width: 768px) {
+    .progress-bar_preview {
+        width: 160px;
+        height: 160px;
+    }
+}
