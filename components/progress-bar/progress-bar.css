@@ -31,9 +31,17 @@
     color: var(--font-1);
 }
 
+.value-container_preview {
+    font-size: 24px;
+}
+
 @media screen and (min-width: 768px) {
     .progress-bar_preview {
         width: 160px;
         height: 160px;
+    }
+
+    .value-container_preview {
+        font-size: 36px;
     }
 }
