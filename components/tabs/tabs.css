@@ -7,11 +7,13 @@
 }
 .tabs__scroller {
     display: flex;
+    padding-bottom: 5px;
+    flex-direction: column;
     align-items: center;
     column-gap: 40px;
 }
 .tabs__label {
-    padding-bottom: 8px;
+    padding: 5px 0;
     font-family: Inter, sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -63,4 +65,11 @@
 }
 .tabs__input_css:checked ~ .template-component__code-block .tabs__content_css {
     display: block;
+}
+
+@media screen and (min-width: 576px) {
+    .tabs__scroller {
+        flex-direction: row;
+        padding-bottom: 0;
+    }
 }
